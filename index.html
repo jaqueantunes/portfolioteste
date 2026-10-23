@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jaqueline Antunes | Estatística e análise de dados</title>
+<meta name="description" content="Portfólio de Jaqueline Antunes, estatística. Cases, trajetória e jeito de trabalhar.">
+<style>
+:root{
+  --paper:#FBF8F1;
+  --ink:#1C1A17;
+  --sun:#F2C230;
+  --blue:#1F4E8C;
+  --line:#1C1A17;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:4.5rem}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.125rem/1.65 var(--sans)}
+a{color:var(--blue);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset:3px;background:var(--sun);color:var(--ink)}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:.75rem 1rem;z-index:20}
+.skip:focus{left:0}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.15;margin:0}
+h2{font-size:clamp(1.9rem,4.5vw,2.75rem);margin-bottom:1.5rem}
+h3{font-size:1.35rem;margin-bottom:.5rem}
+p{margin:0 0 1rem;max-width:62ch}
+
+/* topo */
+.top{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:2px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-top:.75rem;padding-bottom:.75rem}
+.top strong{font-family:var(--serif);font-size:1.2rem}
+.top ul{display:flex;gap:1.25rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.top a{color:var(--ink);font-weight:600;text-decoration:none;padding:.25rem 0;border-bottom:2px solid transparent}
+.top a:hover{border-bottom-color:var(--ink)}
+
+/* hero */
+.hero{background:var(--sun);border-bottom:2px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:3rem;align-items:center;padding-top:5rem;padding-bottom:5rem}
+.hero .oi{font-size:1.25rem;margin:0}
+.hero h1{font-size:clamp(3rem,8vw,5.5rem);margin:.25rem 0 1.25rem}
+.hero .frase{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.25;font-weight:700;margin-bottom:1.25rem}
+.foto{aspect-ratio:4/5;background:var(--paper);border:2px solid var(--line);display:grid;place-items:center;text-align:center;padding:1.5rem;font-size:1rem}
+.foto img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* seções */
+section{padding:5rem 0;border-bottom:2px solid var(--line)}
+.bloco-azul{background:var(--blue);color:#fff}
+.bloco-azul a{color:#fff}
+.bloco-azul a:focus-visible{color:var(--ink)}
+.pendente{background:var(--sun);color:var(--ink);border:2px dashed var(--ink);padding:.75rem 1rem;margin:0 0 1rem;font-weight:600;max-width:62ch}
+
+/* ficha técnica */
+dl.ficha{margin:1.5rem 0;border-top:2px solid var(--line);max-width:46rem}
+dl.ficha div{display:grid;grid-template-columns:11rem 1fr;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--line)}
+dl.ficha dt{font-weight:700}
+dl.ficha dd{margin:0}
+.bloco-azul dl.ficha,.bloco-azul dl.ficha div{border-color:#fff}
+
+/* case */
+.case-head{max-width:46rem;margin-bottom:2rem}
+.campo{display:grid;grid-template-columns:12rem 1fr;gap:2rem;padding:1.75rem 0;border-top:2px solid var(--line)}
+.campo>h3{font-size:1.1rem;font-family:var(--sans);font-weight:700}
+.nao-prova{border-left:6px solid var(--blue);padding:.25rem 0 .25rem 1rem;margin-top:1.5rem;max-width:62ch}
+
+/* como trabalho / outros */
+.tres{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.tres article{border-top:2px solid var(--line);padding-top:1rem}
+.vazio{border:2px dashed var(--ink);padding:1.25rem;font-weight:600}
+
+/* trajetória */
+.linha{list-style:none;padding:0;margin:0;max-width:52rem}
+.linha li{display:grid;grid-template-columns:11rem 1fr;gap:1rem;padding:1rem 0;border-top:1px solid var(--line)}
+.linha .quando{font-weight:700}
+.linha p{margin:0}
+
+/* contato */
+.contato h2{font-size:clamp(2.2rem,6vw,4rem)}
+.contato ul{list-style:none;padding:0;margin:1.5rem 0 0}
+.contato li{margin-bottom:.5rem;font-size:1.25rem}
+footer{padding:2rem 0;font-size:1rem}
+
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:3rem;padding-bottom:3rem;gap:2rem}
+  .foto{aspect-ratio:1/1;order:-1;max-width:16rem}
+  section{padding:3.5rem 0}
+  .campo,.linha li,dl.ficha div{grid-template-columns:1fr;gap:.25rem}
+  .campo{gap:.75rem}
+  .tres{grid-template-columns:1fr}
+  .top ul{gap:.9rem}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="top">
+  <div class="wrap">
+    <strong>Jaqueline Antunes</strong>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#cases">Cases</a></li>
+        <li><a href="#como-trabalho">Como eu trabalho</a></li>
+        <li><a href="#trajetoria">Trajetória</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!--
+  HERO: 3 opções de frase. Troque a do <p class="frase"> pela que preferir.
+  A) Comecei vendendo e cuidando de gente. Hoje confiro se o número aguenta a pergunta.
+  B) No Santander, meu trabalho era refazer modelos de risco do zero pra ver se fechavam.
+  C) Passei por empresa júnior, estoque, banco e chatbot. Em todos, a pergunta era a mesma: o que esse dado prova?
+  Edite para ficar do seu jeito. Só deixe o que for verdade sobre você.
+-->
+<section class="hero" aria-labelledby="nome" style="padding:0">
+  <div class="wrap">
+    <div>
+      <p class="oi">Oi, eu sou a</p>
+      <h1 id="nome">Jaqueline Antunes</h1>
+      <p class="frase">Comecei vendendo e cuidando de gente. Hoje confiro se o número aguenta a pergunta.</p>
+      <p>Sou estatística formada pela UNESP e trabalho com dados desde 2020. Passei por supply chain, TI, risco de crédito e seguros. [AJUSTE ESTAS DUAS LINHAS: o que você faz hoje no Banco Carrefour, em palavras suas]</p>
+    </div>
+    <div class="foto">
+      <!-- Para usar sua foto: salve como foto.jpg na mesma pasta e troque este div por:
+           <img src="foto.jpg" alt="Jaqueline Antunes"> -->
+      [ESCOLHA UMA FOTO]
+    </div>
+  </div>
+</section>
+
+<!-- Seção "Números que eu consigo defender" fica de fora até termos números com história por trás. -->
+
+<section id="cases" aria-labelledby="t-cases">
+  <div class="wrap">
+    <h2 id="t-cases">Cases</h2>
+
+    <article aria-labelledby="case-ibm">
+      <div class="case-head">
+        <h3 id="case-ibm" style="font-size:clamp(1.6rem,3.5vw,2.2rem)">O chatbot foi feito para pagar conta, e tinha gente usando como psicólogo</h3>
+        <dl class="ficha">
+          <div><dt>Onde</dt><dd>IBM, squad de discovery</dd></div>
+          <div><dt>Período</dt><dd>julho de 2021 a novembro de 2022</dd></div>
+          <div><dt>Meu papel</dt><dd>Análise das conversas de um chatbot já comercializado</dd></div>
+        </dl>
+      </div>
+
+      <div class="campo">
+        <h3>Contexto</h3>
+        <div>
+          <p>O chatbot já tinha sido vendido. Meu trabalho era ler as conversas, achar onde os fluxos falhavam e sugerir melhorias para a IA continuar evoluindo.</p>
+          <p>Eu validava os fluxos, analisava o texto que os clientes escreviam e cruzava assuntos, etapas da conversa e abandonos.</p>
+        </div>
+      </div>
+
+      <div class="campo">
+        <h3>Problema</h3>
+        <div>
+          <p>Eu agrupava as mensagens por n-gramas para ver que padrões de linguagem apareciam e onde as pessoas largavam a conversa. Um fluxo chamou atenção: o de pagamento de contas. Ali, as pessoas desistiam ou não conseguiam avançar.</p>
+          <p class="pendente">[ADICIONE: como você percebeu o problema, quantas conversas passavam por esse fluxo, qual era a taxa de abandono e o que você olhou para ter certeza]</p>
+        </div>
+      </div>
+
+      <div class="campo">
+        <h3>Decisão difícil</h3>
+        <div>
+          <p>Muita gente usava o chatbot como uma espécie de psicólogo. Essas mensagens não tinham a ver com a função da ferramenta, e na época foram descartadas da análise.</p>
+          <p class="pendente">[ADICIONE: qual foi sua participação nessa decisão, que alternativas foram discutidas e por que descartar foi a escolha]</p>
+        </div>
+      </div>
+
+      <div class="campo">
+        <h3>Resultado</h3>
+        <div>
+          <p>A análise do fluxo de pagamento contribuiu para melhorar a taxa de conclusão dessa etapa, com efeito positivo no faturamento.</p>
+          <p class="pendente">[ADICIONE: nome da métrica, valor antes e depois, período comparado, e o que você fez versus o que o resto da equipe e outros fatores fizeram]</p>
+        </div>
+      </div>
+
+      <div class="campo">
+        <h3>O que eu faria diferente</h3>
+        <div>
+          <p>Eu procuraria um canal para encaminhar as conversas que não cabiam em nenhum fluxo, em vez de descartá-las. Assim elas virariam uma categoria que dá para estudar.</p>
+          <p class="pendente">[ADICIONE: o que significa "CAC" aqui, como esse canal funcionaria e o que você esperaria ganhar com ele]</p>
+        </div>
+      </div>
+
+      <div class="nao-prova">
+        <h3 style="font-size:1.1rem">O que essa análise não prova</h3>
+        <p class="pendente" style="margin:0">[ADICIONE: o que fica em aberto. Por exemplo, se a melhoria veio só do fluxo ou de outras mudanças ao mesmo tempo]</p>
+      </div>
+    </article>
+
+    <div class="tres" style="margin-top:4rem">
+      <article>
+        <h3>[TÍTULO DO CASE 2: um resultado ou uma tensão]</h3>
+        <p class="vazio">[ADICIONE SEU CASE AQUI]</p>
+      </article>
+      <article>
+        <h3>[TÍTULO DO CASE 3: um resultado ou uma tensão]</h3>
+        <p class="vazio">[ADICIONE SEU CASE AQUI]</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="como-trabalho" class="bloco-azul" aria-labelledby="t-como">
+  <div class="wrap">
+    <h2 id="t-como">Como eu trabalho</h2>
+    <p>Três ou quatro comportamentos meus, cada um preso a uma história que aconteceu.</p>
+    <div class="tres">
+      <article>
+        <h3>[COMPORTAMENTO 1]</h3>
+        <p class="pendente">[ADICIONE A HISTÓRIA: uma vez em que você tomou iniciativa sem ninguém pedir]</p>
+      </article>
+      <article>
+        <h3>[COMPORTAMENTO 2]</h3>
+        <p class="pendente">[ADICIONE A HISTÓRIA: uma decisão difícil que você tomou]</p>
+      </article>
+      <article>
+        <h3>[COMPORTAMENTO 3]</h3>
+        <p class="pendente">[ADICIONE A HISTÓRIA: uma vez em que você precisou aprender rápido]</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="trajetoria" aria-labelledby="t-traj">
+  <div class="wrap">
+    <h2 id="t-traj">Trajetória</h2>
+    <ol class="linha">
+      <li><span class="quando">2024 até hoje</span><p><strong>Banco Carrefour</strong>, analista de dados. Seguros: ciclo de vida do cliente, churn e performance do portfólio. [ADICIONE 2 destaques concretos]</p></li>
+      <li><span class="quando">2022 a 2024</span><p><strong>Santander</strong>, analista de risco, time de validação tecnológica. Validação de modelos de risco de crédito, operacional e IFRS9, com réplicas independentes dos modelos. [ADICIONE 2 destaques concretos]</p></li>
+      <li><span class="quando">2021 a 2022</span><p><strong>IBM</strong>, analista de negócios em TI, squad de discovery. Dados estruturados e texto, painéis em Tableau. O case está acima.</p></li>
+      <li><span class="quando">2020 a 2021</span><p><strong>GPA</strong>, analista de demanda júnior. Previsão de vendas e ajuste de estoque na mercearia, com reunião semanal com o comercial. [ADICIONE 1 destaque concreto]</p></li>
+      <li><span class="quando">2020</span><p><strong>ASN.Rocks</strong>, padawan em analytics. Relatórios automatizados em R e monitoria de estatística. [ADICIONE 1 destaque concreto]</p></li>
+      <li><span class="quando">2017 a 2019</span><p><strong>EJEST</strong>, empresa júnior. Gerente de gestão de pessoas e depois de vendas, com um projeto usando ANOVA e pesquisa de campo. [ADICIONE 1 destaque concreto]</p></li>
+      <li><span class="quando">2017 a 2022</span><p><strong>UNESP</strong>, Estatística. [ADICIONE disciplinas ou trabalhos que valem citar]</p></li>
+      <li><span class="quando">Agora</span><p><strong>FIAP</strong>, MBA em Data Analytics.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="fora" aria-labelledby="t-fora" class="bloco-azul">
+  <div class="wrap">
+    <h2 id="t-fora">Fora do trabalho</h2>
+    <p class="pendente">[ADICIONE 3 a 5 detalhes que mostrem quem você é: uma obsessão pequena, algo que está aprendendo, um hábito. Nada de lista de hobby]</p>
+  </div>
+</section>
+
+<section id="contato" class="contato" aria-labelledby="t-contato" style="background:var(--sun)">
+  <div class="wrap">
+    <h2 id="t-contato">Quer conversar?</h2>
+    <p>[AJUSTE: uma frase sua, simples, sobre o tipo de conversa que você quer ter]</p>
+    <ul>
+      <li><a href="mailto:jaque.acortes@gmail.com">jaque.acortes@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/jaquecortes">linkedin.com/in/jaquecortes</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">Jaqueline Antunes, São Paulo.</div>
+</footer>
+</body>
+</html>
